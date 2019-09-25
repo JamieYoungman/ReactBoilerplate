@@ -13,7 +13,6 @@ describe('App', () => {
   });
 
   it('should have a H1', () => {
-    console.log(element.debug());
     expect(element.find('H1')).toHaveLength(1);
   });
 });
