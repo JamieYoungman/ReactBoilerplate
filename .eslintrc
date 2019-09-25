@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "parser": "babel-eslint",
   "extends": ["airbnb", "prettier"],
@@ -9,8 +10,14 @@
   "rules": {
     "no-unused-vars": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "no-console": "warn",
+    "no-console": "error",
     "prettier/prettier": "error",
-    "jsx-quotes": ["error", "single"]
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ]
   }
 }
