@@ -1,8 +1,8 @@
 const path = require('path');
-var hwp = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -12,8 +12,8 @@ module.exports = {
   },
   mode: 'development',
   plugins: [
-    new hwp({
-      template: 'src/index.html'
+    new HtmlWebpackPlugin({
+      template: 'app/index.html'
     })
   ],
   devServer: {
